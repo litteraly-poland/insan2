@@ -1,0 +1,65 @@
+﻿l_english:
+
+#Zalenskyy's Moskva
+ MSK: "Moskovska Ukrayinska Derzhava"
+ MSK_DEF: "the Ukrainian State of Moskva"
+ MSK_ADJ: "Ukrainian Moscowy"
+
+ #Hunnic Empire
+
+ HNI: "Hunnic Empire"
+ HNI_DEF: "the Hunnic Empire"
+ HNI_ADJ: "Imperial Hunnic"
+ 
+ #Cyber Georgia-Azerbijian
+
+ GAZ: "First State: Cyberazerogia"
+ GAZ_DEF: "the First State: Cyberazerogia"
+ GAZ_ADJ: "Cyberazerogian"
+ 
+ #Cezchoslovak Merchantile Archduchy
+
+ CZL: "Czechoslovak Merchantile Archduchy"
+ CZL_DEF: "the Czechoslovak Merchantile Archduchy"
+ CZL_ADJ: "Czechoslovak Merchantile"
+
+#Zelorossyian People's Interstellar Soviet
+ ZEL: "Zelorossyian People's Interstellar Soviet"
+ ZEL_DEF: "the Zelorossyian People's Interstellar Soviet"
+ ZEL_ADJ: "Interstellar Zelorossyian"
+
+# Russian Mecha-Horde
+
+ THR: "Empire of Mekharussiya"
+ THR_DEF: "Empire of Mekharussiya"
+ THR_ADJ: "Mekharussiyan"
+
+# Stalin's White Army
+
+ STL: "Stalin's White Legion"
+ STL_DEF: "Stalin's White Legion"
+ STL_ADJ: "Stalingrad Legionary"
+
+ NIR: "Ulster Nation"
+ NIR_DEF: "the Ulster Nation"
+ NIR_ADJ: "Ulster"
+
+# Celtic
+ IRE: "Tír na hÉireann"
+ IRE_DEF: "the Tír na hÉireann"
+ IRE_ADJ: "Irish"
+ IRE_Celtic: "Aontas na Stát Ceilteach"
+ IRE_Celtic_DEF: "the Aontas na Stát Ceilteach"
+ IRE_Celtic_ADJ: "Celtic"
+
+ WLS: "Gwlad Cymru"
+ WLS_DEF: "the Gwlad Cymru"
+ WLS_ADJ: "Welsh"
+
+ CRN: "Gwlas Kernow"
+ CRN_DEF: "the Gwlas Kernow"
+ CRN_ADJ: "Cornish"
+ 
+ 
+ #OTHER BRIT STUFF
+ autonomy_celtic_land:0 "Celtic Land"

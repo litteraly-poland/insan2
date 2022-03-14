@@ -1,0 +1,3 @@
+is_celtic = {
+	has_country_flag = is_celtic
+}

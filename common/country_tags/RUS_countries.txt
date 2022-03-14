@@ -1,0 +1,7 @@
+GAZ	= "countries/Georgia-Azerbijian.txt" # Cyberfundementalist Georgia-Azerbijian
+ZEL	= "countries/Zelorossyia.txt" # Zelorossyian People's Interstellar Soviet
+STL	= "countries/Stalingrad.txt" # Stalin's White Army
+HNI	= "countries/Hunnia.txt" # Hunnic Empire
+CZL	= "countries/Czechoslovak Legion.txt" # Cezchoslovak Merchantile Archduchy
+THR	= "countries/The Mecha-Horde.txt" # Russian Mecha-Horde
+MSK	= "countries/Moskva.txt" # Zelenskyy's Moscow

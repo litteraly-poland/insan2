@@ -1,0 +1,55 @@
+﻿l_english:
+
+#Socialists
+ SRE: "Socialist Republic of England"
+ SRE_DEF: "the Socialist Republic of England"
+ SRE_ADJ: "Socialist English"
+ 
+ ENZ: "Free Territory of England"
+ ENZ_DEF: "the Free Territory of England"
+ ENZ_ADJ: "Free English"
+ 
+ NTH: "Northern Republic"
+ NTH_DEF: "the Northern Republic"
+ NTH_ADJ: "Northern English"
+ 
+ SIR: "Democratic Republic of Ireland"
+ SIR_DEF: "the Democratic Republic of Ireland"
+ SIR_ADJ: "Southern Irish"
+
+#Loyalists
+ REM: "Realm of the Territories of the English Monarch"
+ REM_DEF: "the Realm of the Territories of the English Monarch"
+ REM_ADJ: "Royal English"
+
+ FTB: "Provisional Government of the Football Association"
+ FTB_DEF: "the Provisional Government of the Football Association"
+ FTB_ADJ: "Association English"
+
+ SCO: "Kingdom of Alba"
+ SCO_DEF: "the Kingdom of Alba"
+ SCO_ADJ: "Alba"
+
+ NIR: "Ulster Nation"
+ NIR_DEF: "the Ulster Nation"
+ NIR_ADJ: "Ulster"
+
+# Celtic
+ IRE: "Tír na hÉireann"
+ IRE_DEF: "the Tír na hÉireann"
+ IRE_ADJ: "Irish"
+ IRE_Celtic: "Aontas na Stát Ceilteach"
+ IRE_Celtic_DEF: "the Aontas na Stát Ceilteach"
+ IRE_Celtic_ADJ: "Celtic"
+
+ WLS: "Gwlad Cymru"
+ WLS_DEF: "the Gwlad Cymru"
+ WLS_ADJ: "Welsh"
+
+ CRN: "Gwlas Kernow"
+ CRN_DEF: "the Gwlas Kernow"
+ CRN_ADJ: "Cornish"
+ 
+ 
+ #OTHER BRIT STUFF
+ autonomy_celtic_land:0 "Celtic Land"

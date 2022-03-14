@@ -1,0 +1,477 @@
+ PRE_commisariats = {
+	PRE_POLEN = {
+			ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		available = {
+			owns_state = 10
+			owns_state = 98
+			owns_state = 87
+			owns_state = 90
+			owns_state = 92
+			owns_state = 88
+			owns_state = 91
+			owns_state = 89	
+		}
+		complete_effect = {
+			POL = {
+				transfer_state = 10
+				transfer_state = 90
+				transfer_state = 92
+				transfer_state = 88
+				transfer_state = 91
+				transfer_state = 89	
+				set_cosmetic_tag = PRE_POL
+			}
+			puppet = POL
+		}
+	}
+	PRE_UKRAINE = {
+			ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		available = {
+			owns_state = 93
+			owns_state = 201
+			owns_state = 199	
+			owns_state = 202
+			owns_state = 198
+			owns_state = 203
+			owns_state = 834
+			owns_state = 192
+			owns_state = 193
+			owns_state = 259
+			owns_state = 197
+			owns_state = 226
+			owns_state = 225
+			owns_state = 200
+			owns_state = 196
+			owns_state = 220
+			owns_state = 240
+			owns_state = 227
+			owns_state = 221
+			owns_state = 228
+		}
+		complete_effect = {
+			UKR = {
+				transfer_state = 93
+				transfer_state = 201
+				transfer_state = 199
+				transfer_state = 202
+				transfer_state = 198
+				transfer_state = 203
+				transfer_state = 834
+				transfer_state = 192
+				transfer_state = 193
+				transfer_state = 259
+				transfer_state = 197
+				transfer_state = 226
+				transfer_state = 225
+				transfer_state = 200
+				transfer_state = 196
+				transfer_state = 220
+				transfer_state = 240
+				transfer_state = 227
+				transfer_state = 221
+				transfer_state = 228
+				set_cosmetic_tag = PRE_UKR
+			}
+			puppet = UKR
+		}
+	}
+	PRE_WEIßRUTHENIEN = {
+			ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		available = {
+			owns_state = 194
+			owns_state = 207
+			owns_state = 204
+			owns_state = 206
+			owns_state = 784
+			owns_state = 96
+			owns_state = 95
+			owns_state = 94
+		}
+		complete_effect = {
+			BLR = {
+				transfer_state = 194
+				transfer_state = 207
+				transfer_state = 204
+				transfer_state = 206
+				transfer_state = 784
+				transfer_state = 96
+				transfer_state = 95
+				transfer_state = 94
+				set_cosmetic_tag = PRE_OST
+			}
+			puppet = BLR
+		}
+	}
+	PRE_BALTISCH = {
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			owns_state = 814
+			owns_state = 11
+			owns_state = 815
+			owns_state = 189
+			owns_state = 188
+			owns_state = 190
+			owns_state = 809
+			owns_state = 810
+			owns_state = 810
+			owns_state = 12
+			owns_state = 808
+			owns_state = 191
+			owns_state = 13
+			owns_state = 813
+			owns_state = 812
+			owns_state = 811
+		}
+		fire_only_once = yes
+		complete_effect = {
+			LAT = {
+				transfer_state = 814
+				transfer_state = 11
+				transfer_state = 815
+				transfer_state = 189
+				transfer_state = 190
+				transfer_state = 809
+				transfer_state = 810
+				transfer_state = 810
+				transfer_state = 12
+				transfer_state = 808
+				transfer_state = 191
+				transfer_state = 13
+				transfer_state = 813
+				transfer_state = 812
+				transfer_state = 811
+				set_cosmetic_tag = PRE_BLT
+			}
+			puppet = LAT
+		}
+	}
+	PRE_SLOWAKEI = {
+			ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		available = {
+			owns_state = 70
+			owns_state = 71
+			owns_state = 664
+			
+		}
+		complete_effect = {
+			SLO = {
+				transfer_state = 70
+				transfer_state = 71
+				transfer_state = 664
+				add_state_core = 70
+				add_state_core = 71
+				add_state_core = 664
+				set_cosmetic_tag = PRE_SLO
+			} 
+			puppet = SLO
+		}
+	}
+	PRE_PBM = {
+			ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		available = {
+			owns_state = 9
+			owns_state = 75
+			
+		}
+		complete_effect = {
+			CZE = {
+				transfer_state = 9
+				transfer_state = 75
+				set_cosmetic_tag = PRE_PBM
+			} 
+			puppet = CZE
+		}
+	}
+	PRE_KARPATEN = {
+			ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		available = {
+			owns_state = 84
+			owns_state = 76
+			owns_state = 82
+			owns_state = 83
+			
+		}
+		complete_effect = {
+			TRA = {
+				transfer_state = 83
+				transfer_state = 82
+				transfer_state = 76
+				transfer_state = 84
+				set_cosmetic_tag = PRE_KPT
+			} 
+			puppet = TRA
+		}
+	}
+	PRE_TRANSFERHUN = {
+			ai_will_do = {
+			factor = 1
+		}
+		visible = {
+			country_exists = TRA
+			TRA = {
+				is_puppet_of = PRE
+			}
+		}
+		fire_only_once = yes
+		available = {
+			owns_state = 154
+			owns_state = 43
+			owns_state = 155
+			owns_state = 73
+			
+		}
+		complete_effect = {
+			TRA = {
+				transfer_state = 154
+				transfer_state = 43
+				transfer_state = 155
+				transfer_state = 73
+			} 
+		}
+	}
+	PRE_TRANSFERROM = {
+			ai_will_do = {
+			factor = 1
+		}
+		visible = {
+			country_exists = TRA
+			TRA = {
+				is_puppet_of = PRE
+			}
+		}
+		fire_only_once = yes
+		available = {
+			owns_state = 81
+			owns_state = 46
+			owns_state = 79
+			owns_state = 78
+			owns_state = 80
+			owns_state = 766
+			owns_state = 77
+			
+		}
+		complete_effect = {
+			TRA = {
+				transfer_state = 81
+				transfer_state = 46
+				transfer_state = 79
+				transfer_state = 78
+				transfer_state = 80
+				transfer_state = 766
+				transfer_state = 77
+			} 
+		}
+	}
+	PRE_SPLITYUG = {
+			ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		available = {
+			owns_state = 102
+			owns_state = 103
+			owns_state = 109
+			owns_state = 45
+			owns_state = 764
+			owns_state = 104
+			owns_state = 804
+			owns_state = 105
+			owns_state = 107
+			owns_state = 803
+			owns_state = 802
+			owns_state = 106
+			
+		}
+		complete_effect = {
+			CRO = {
+				transfer_state = 109
+				transfer_state = 103
+				transfer_state = 104
+				transfer_state = 804
+				set_cosmetic_tag = PRE_CRO
+			} 
+			SER = {
+				transfer_state = 107
+				transfer_state = 108
+				transfer_state = 45
+				transfer_state = 764
+				set_cosmetic_tag = PRE_SER
+			}
+			MAC = {
+				transfer_state = 802
+				transfer_state = 803
+				transfer_state = 106
+				transfer_state = 105	
+				set_cosmetic_tag = PRE_MAZ
+			}
+			puppet = CRO
+			puppet = MAC
+			puppet = SER
+		}
+	}
+	PRE_TRANSFERBUL = {
+			ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		visible = {
+			country_exists = MAC
+			MAC = {
+				is_puppet_of = PRE
+			}
+		}
+		fire_only_once = yes
+		available = {
+			owns_state = 212
+			owns_state = 211
+			owns_state = 801
+			owns_state = 48
+		}
+		complete_effect = {
+			MAC = {
+				transfer_state = 212
+				transfer_state = 211
+				transfer_state = 801
+				transfer_state = 48
+			} 
+		}
+	}
+	PRE_TRANSFERALB = {
+			ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		visible = {	
+			country_exists = MAC
+			MAC = {
+				is_puppet_of = PRE
+			}
+		}
+		fire_only_once = yes
+		available = {
+			owns_state = 44
+			owns_state = 805
+		}
+		complete_effect = {
+			MAC = {
+				transfer_state = 44
+				transfer_state = 805
+			} 
+		}
+	}
+	PRE_TRANSFERGRE = {
+			ai_will_do = {
+			factor = 1
+		}
+		visible = {	
+			country_exists = MAC
+			MAC = {
+				is_puppet_of = PRE
+			}
+		}
+		fire_only_once = yes
+		available = {
+			owns_state = 731
+			owns_state = 184
+			owns_state = 185
+			owns_state = 47
+			owns_state = 187
+			owns_state = 186
+			owns_state = 182
+		}
+		complete_effect = {
+			MAC = {
+				transfer_state = 731
+				transfer_state = 184
+				transfer_state = 185
+				transfer_state = 47
+				transfer_state = 187
+				transfer_state = 186
+				transfer_state = 182
+			} 
+		}
+	}
+	PRE_TRANSFEREUK = {
+			ai_will_do = {
+			factor = 1
+		}
+		visible = {	
+			country_exists = UKR
+			UKR = {
+				is_puppet_of = PRE
+			}
+		}
+		fire_only_once = yes
+		available = {
+			owns_state = 265
+			owns_state = 260
+			owns_state = 245
+			owns_state = 218
+		}
+		complete_effect = {
+			UKR = {
+				transfer_state = 265
+				transfer_state = 260
+				transfer_state = 245
+				transfer_state = 218
+			} 
+		}
+	}
+	PRE_KAUKASUS = {
+			ai_will_do = {
+			factor = 1
+		}
+		fire_only_once = yes
+		available = {
+			owns_state = 230
+			owns_state = 229
+			owns_state = 231
+			owns_state = 826
+			owns_state = 827
+			owns_state = 828
+			owns_state = 821
+			owns_state = 232
+			owns_state = 235
+			owns_state = 233
+			owns_state = 234
+			
+		}
+		complete_effect = {
+			GEO = {
+				transfer_state = 230
+				transfer_state = 229
+				transfer_state = 231
+				transfer_state = 826
+				transfer_state = 827
+				transfer_state = 828
+				transfer_state = 821
+				transfer_state = 232
+				transfer_state = 235
+				transfer_state = 233
+				transfer_state = 234
+				set_cosmetic_tag = PRE_KAU
+			} 
+			puppet = GEO
+		}
+	}
+}

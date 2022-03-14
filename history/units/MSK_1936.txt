@@ -1,0 +1,328 @@
+﻿division_template = {
+	name = "Ukrayinsʹkyy Lehioner"		# Infantry Division - Reserve division called to full strength in time of war
+	division_names_group = MSK_INF_02
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+}
+division_template = {
+	name = "Lazerna Husarsʹka Dyviziya"  	# Cavalry Division
+	division_names_group = MSK_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+	}
+}
+
+units = {
+	##### Ejército Argentino #####
+	division= {	# "Ukrayinsʹkyy Lehioner"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 6386 # army group south
+		division_template = "Ukrayinsʹkyy Lehioner"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "Ukrayinsʹkyy Lehioner"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 6411 # army group south
+		division_template = "Ukrayinsʹkyy Lehioner"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "Ukrayinsʹkyy Lehioner"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 9261 # army group south
+		division_template = "Ukrayinsʹkyy Lehioner"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "Ukrayinsʹkyy Lehioner"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 9261 # army group south
+		division_template = "Ukrayinsʹkyy Lehioner"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "Lazerna Husarsʹka Dyviziya"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 6252 # army group south
+		division_template = "Lazerna Husarsʹka Dyviziya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "Lazerna Husarsʹka Dyviziya"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 300 # army group south
+		division_template = "Lazerna Husarsʹka Dyviziya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "Ukrayinsʹkyy Lehioner"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 300 # army group south
+		division_template = "Ukrayinsʹkyy Lehioner"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "Ukrayinsʹkyy Lehioner"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 261 # Tula Defense core
+		division_template = "Ukrayinsʹkyy Lehioner"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "Ukrayinsʹkyy Lehioner"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 212 # Tula Defense core
+		division_template = "Ukrayinsʹkyy Lehioner"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "Ukrayinsʹkyy Lehioner"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 325 # Tula Defense core
+		division_template = "Ukrayinsʹkyy Lehioner"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "Lazerna Husarsʹka Dyviziya"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 6262 # Tula Defense core
+		division_template = "Lazerna Husarsʹka Dyviziya"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.5
+
+	}
+	division= {	# "Lazerna Husarsʹka Dyviziya"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 6262 # Tula Defense core
+		division_template = "Lazerna Husarsʹka Dyviziya"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.5
+
+	}
+	division= {	# "Ukrayinsʹkyy Lehioner"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 350 # Moscow Brigades
+		division_template = "Ukrayinsʹkyy Lehioner"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "Ukrayinsʹkyy Lehioner"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 350 # Moscow Brigades
+		division_template = "Ukrayinsʹkyy Lehioner"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "Ukrayinsʹkyy Lehioner"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 11368 # Moscow Brigades
+		division_template = "Ukrayinsʹkyy Lehioner"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "Ukrayinsʹkyy Lehioner"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 11217 # Moscow Brigades
+		division_template = "Ukrayinsʹkyy Lehioner"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "Ukrayinsʹkyy Lehioner"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 9235 # Moscow Brigades
+		division_template = "Ukrayinsʹkyy Lehioner"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "Ukrayinsʹkyy Lehioner"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 6380 # Moscow Brigades
+		division_template = "Ukrayinsʹkyy Lehioner"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "Ukrayinsʹkyy Lehioner"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 6380 # Moscow Brigades
+		division_template = "Ukrayinsʹkyy Lehioner"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "Ukrayinsʹkyy Lehioner"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
+		location = 214 # Army Group North
+		division_template = "Ukrayinsʹkyy Lehioner"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "Ukrayinsʹkyy Lehioner"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
+		location = 3339 # Army Group North
+		division_template = "Ukrayinsʹkyy Lehioner"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "Ukrayinsʹkyy Lehioner"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
+		location = 6362 # Army Group North
+		division_template = "Ukrayinsʹkyy Lehioner"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "Ukrayinsʹkyy Lehioner"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
+		location = 6362 # Army Group North
+		division_template = "Ukrayinsʹkyy Lehioner"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "Ukrayinsʹkyy Lehioner"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
+		location = 6269 # Army Group North
+		division_template = "Ukrayinsʹkyy Lehioner"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "Ukrayinsʹkyy Lehioner"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
+		location = 6316 # Army Group North
+		division_template = "Ukrayinsʹkyy Lehioner"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+}
+
+air_wings = {
+	### Dirección General de Aeronáutica -- La Paz
+	205 = {
+		# Fighter Group -- Curtis Hawk IIs
+		fighter_equipment_0 =  {
+			owner = "MSK" 
+			amount = 17
+		}
+	}
+}
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "MSK"
+		}
+		requested_factories = 2
+		progress = 0.33
+		efficiency = 100
+	}
+}

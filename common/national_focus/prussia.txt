@@ -1,0 +1,297 @@
+﻿focus_tree = {
+	id = PRE_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = PRE
+		}
+	}
+	default = no
+	
+
+	focus = {
+		id = PRE_BUYDANZIG
+		icon = GFX_focus_ger_revive_kaiserreich
+		x = 10
+		y = 0
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_political_power = -10
+			POL = {
+				add_political_power = 10
+				declare_war_on = {
+					target = LIT
+					type = annex_everything
+				}
+				add_state_core = 11
+				add_state_core = 814
+				add_state_core = 815
+				add_state_core = 189
+				remove_state_core = 86
+				remove_state_core = 85
+				remove_state_core = 807
+				remove_state_core = 762
+			}
+			hidden_effect = {
+				
+				transfer_state = 86
+				transfer_state = 807
+				transfer_state = 85
+				transfer_state = 188
+				transfer_state = 762
+				add_state_core = 86
+				add_state_core = 807
+				add_state_core = 85
+				add_state_core = 188
+				add_state_core = 762
+				86 = {
+					set_state_name = "Posen"
+				}
+				807 = {
+					set_state_name = "Westpreußen"
+				}
+				85 = {
+					set_state_name = "Danzig"
+					set_demilitarized_zone = no
+				}
+				762 = {
+					set_state_name = "Kattowitz"
+				}
+				set_province_name = {
+					id = 6558
+					name = "Posen"
+				}
+				set_province_name = {
+					id = 279
+					name = "Bromberg"
+				}
+				set_province_name = {
+					id = 3295
+					name = "Thorn"
+				}
+				set_province_name = {
+					id = 9623
+					name = "Gdingen"
+				}
+				set_province_name = {
+					id = 362
+					name = "Danzig"
+				}
+				set_province_name = {
+					id = 6464
+					name = "Kattowitz"
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = PRE_INVADEBRANDENBURG
+		icon = GFX_focus_ger_revive_kaiserreich
+		x = 10
+		y = 1
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = PRE_BUYDANZIG
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_political_power = -10
+			declare_war_on = {
+				target = DDR
+				type = annex_everything
+			}
+			add_civil_war_target = DDR
+		}
+	}
+	focus = {
+		id = PRE_COUP
+		icon = GFX_goal_support_fascism
+		x = 10
+		y = 2
+		cost = 3
+		bypass = {
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war = no
+		}
+		prerequisite = {
+			focus = PRE_INVADEBRANDENBURG
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+				set_capital = {
+					state = 64
+					remember_old_capital = no
+				}
+			start_civil_war = {			
+				
+				ruling_party = fascism
+				ideology = neutrality
+				size = 0.2
+				only_own_territory = no
+				capital = 282
+				states = { 
+					86 66 67 762 807 5 763 188 85
+				}
+				keep_political_leader = no
+				keep_political_party_members = no
+			}
+		}
+	}
+	focus = {
+		id = PRE_INVADEBAYERN
+		icon = GFX_goal_support_fascism
+		x = 10
+		y = 3
+		cost = 3
+		available = {
+			has_war = no
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = PRE_COUP
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_political_power = -10
+			declare_war_on = {
+				target = BAY
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = PRE_PROCLAIMARYANEMPIRE
+		icon = GFX_goal_support_fascism
+		x = 10
+		y = 4
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = PRE_INVADEBAYERN
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			set_cosmetic_tag = ARYAN_EMP
+			add_political_power = 100
+			declare_war_on = {
+				target = SHL
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = HAN
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = WUR
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = PRE_POLISHSCUM
+		icon = GFX_goal_support_fascism
+		x = 10
+		y = 5
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = PRE_PROCLAIMARYANEMPIRE
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_political_power = 100
+			declare_war_on = {
+				target = POL
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = PRE_CZECHNOSLOVAKIA
+		icon = GFX_goal_support_fascism
+		x = 10
+		y = 6
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = PRE_POLISHSCUM
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_political_power = 100
+			declare_war_on = {
+				target = CZE
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = PRE_ANSCHLUSS
+		icon = GFX_goal_support_fascism
+		x = 10
+		y = 7
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = {
+			focus = PRE_CZECHNOSLOVAKIA
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_political_power = 100
+			annex_country = {
+				target = AUS
+				transfer_troops = yes
+			}
+		}
+	}
+}

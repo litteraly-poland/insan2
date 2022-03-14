@@ -1,0 +1,131 @@
+﻿add_namespace = ordensstaat
+
+# Ask SOV about joining Comintern
+country_event = {
+	id = ordensstaat.1
+	title = czech.1.t
+	desc = czech.1.d
+	picture = GFX_report_event_hitler_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = czech.1.a #yes
+		ai_chance = {
+			factor = 80
+		}
+		CZE = {
+			9 = {
+				create_unit = {
+					division = "name = \"Pěší divize\" division_template = \"Pěší divize\" start_experience_factor = 0.4"
+					owner = CZE
+					count = 5
+					allow_spawning_on_enemy_provs = yes
+				}	
+			}
+			drop_cosmetic_tag = CZE
+			start_civil_war = {			
+				
+				ruling_party = democratic
+				ideology = fascism
+				size = 0.2
+				only_own_territory = no
+				capital = 282
+				states = { 
+					75
+				}
+				keep_political_leader = no
+				keep_political_party_members = no
+				set_cosmetic_tag = PRE_PBM
+			}
+			
+		}
+	}
+}
+country_event = {
+	id = ordensstaat.2
+	title = czech.1.t
+	desc = czech.1.d
+	picture = GFX_report_event_hitler_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = czech.1.a #yes
+		ai_chance = {
+			factor = 80
+		}
+		POL = {
+			10 = {
+				create_unit = {
+					division = "name = \"Dywizja Piechoty\" division_template = \"Dywizja Piechoty\" start_experience_factor = 0.4"
+					owner = POL
+					count = 14
+					allow_spawning_on_enemy_provs = yes
+				}	
+			}
+			drop_cosmetic_tag = POL
+			start_civil_war = {			
+				ruling_party = democratic
+				ideology = fascism
+				size = 0.2
+				only_own_territory = no
+				capital = 282
+				states = { 
+					91 89 88
+				}
+				keep_political_leader = no
+				keep_political_party_members = no
+				set_cosmetic_tag = PRE_POL
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ordensstaat.3
+	title = czech.1.t
+	desc = czech.1.d
+	picture = GFX_report_event_hitler_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = czech.1.a #yes
+		ai_chance = {
+			factor = 80
+		}
+		ROM = {
+			transfer_state = 46
+			46 = {
+				create_unit = {
+					division = "name = \"Divizia de Infanterie\" division_template = \"Divizia de Infanterie\" start_experience_factor = 0.4"
+					owner = ROM
+					count = 14
+					allow_spawning_on_enemy_provs = yes
+				}	
+			}
+		}
+		HUN = {
+			transfer_state = 43
+			43 = {
+				create_unit = {
+					division = "name = \"Gyalogdandár\" division_template = \"Gyalogdandár\" start_experience_factor = 0.4"
+					owner = HUN
+					count = 14
+					allow_spawning_on_enemy_provs = yes
+				}	
+			}
+		}
+		TRA = {
+			declare_war_on = {
+				target = ROM
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = HUN
+				type = annex_everything
+			}
+		}
+	}
+}

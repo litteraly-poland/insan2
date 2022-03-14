@@ -1,0 +1,247 @@
+﻿focus_tree = {
+	id = fea_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = FEA
+		}
+	}
+	default = no
+	
+
+	focus = {
+		id = FEA_RPATH
+		icon = GFX_goal_support_fascism
+		x = 18
+		y = 0
+		mutually_exclusive = {
+			focus = FEA_CPATH
+		}
+		mutually_exclusive = {
+		focus = FEA_LPATH
+		}
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	}
+	focus = {
+		id = FEA_CPATH
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 15
+		y = 0
+		mutually_exclusive = {
+			focus = FEA_RPATH
+		}
+		mutually_exclusive = {
+		focus = FEA_LPATH
+		}
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	}
+	focus = {
+		id = FEA_LPATH
+		icon = GFX_focus_generic_join_comintern
+		x = 12
+		y = 0
+		mutually_exclusive = {
+			focus = FEA_RPATH
+		}
+		mutually_exclusive = {
+			focus = FEA_CPATH
+		}
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+	}
+
+	focus = {
+		id = CFEAFREE
+		icon = GFX_focus_generic_join_comintern
+		x = 11
+		y = 1
+		prerequisite = {
+			focus = FEA_LPATH
+		}
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		
+		
+		completion_reward = {
+			
+			FCA = {
+				transfer_state = 772
+				transfer_state = 539
+				transfer_state = 773
+				division_template = {
+					name = "Test"
+					division_names_group = USA_INF_01
+					priority = 0
+					template_counter = 0
+					regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 0 y = 3 }
+						}
+					support = { 
+						military_police = { x = 0 y = 0 }
+					}
+				}
+				change_tag_from = FEA
+				
+            }
+			FEA = {
+					division_template = {
+						name = "Test"
+						division_names_group = USA_INF_01
+						priority = 0
+						template_counter = 0
+						regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 0 y = 3 }
+							}
+						support = { 
+							military_police = { x = 0 y = 0 }
+						}
+					}
+					declare_war_on	 = {
+							target = FCA
+							type = annex_everything
+						}
+
+				774 = {
+					create_unit = {
+						division = "name = \"Fang Mercenaries\" division_template = \"Test\" start_experience_factor = 0.4"
+						owner = FEA
+						count = 3
+						allow_spawning_on_enemy_provs = yes
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"Fang Mercenaries\" division_template = \"Test\" start_experience_factor = 0.4"
+							owner = FCA
+							count = 3
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = FEA_GOVEXL
+		icon = GFX_focus_generic_the_giant_wakes	
+		x = 15
+		y = 1
+		prerequisite = {
+			focus = FEA_CPATH
+		}
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			set_cosmetic_tag = FRA_EXL
+		}
+	}
+	focus = {
+		id = FEA_WHT
+		icon = GFX_goal_support_fascism
+		x = 20
+		y = 1
+		prerequisite = {
+			focus = FEA_RPATH
+		}
+		mutually_exclusive = {
+			focus = FEA_AFC
+		}
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+				last_election = "1935.1.1"
+				election_frequency = 48
+			}	
+			set_cosmetic_tag = TRU_FRA
+		}
+	}
+	focus = {
+		id = FEA_AFC
+		icon = GFX_goal_support_fascism
+		x = 17
+		y = 1
+		prerequisite = {
+			focus = FEA_RPATH
+		}
+		mutually_exclusive = {
+			focus = FEA_WHT
+		}
+
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+				last_election = "1935.1.1"
+				election_frequency = 48
+		}
+		completion_reward = {
+			set_cosmetic_tag = FEA_AFS
+		}
+	}

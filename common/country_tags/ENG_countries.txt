@@ -1,0 +1,11 @@
+SRE	= "countries/United Kingdom.txt" # Socialist Republic of England
+REM	= "countries/United Kingdom.txt" # The Realm
+CRN	= "countries/United Kingdom.txt" # Cornwall
+ENZ	= "countries/United Kingdom.txt" # Free Territory
+FTB	= "countries/United Kingdom.txt" # Provisional Gov't
+NTH	= "countries/United Kingdom.txt" # Northern Republic
+SIR	= "countries/United Kingdom.txt" # South Ireland
+# Ulster Nation
+# Wales
+# Scotland
+# Ireland

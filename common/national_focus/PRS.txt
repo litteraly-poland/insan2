@@ -1,0 +1,576 @@
+﻿focus_tree = {	
+	id = fea_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = PRS
+		}
+	}
+	default = no
+	
+
+	focus = {
+		id = PRS_INTRO
+		icon = GFX_focus_generic_join_comintern
+		x = 10
+		y = 0
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = PRS_FATEOFCOMMUNE
+		icon = GFX_focus_generic_join_comintern
+		x = 10
+		y = 1
+		prerequisite = {
+			focus = PRS_INTRO
+		}
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = PRS_PEACEEXI
+		icon = GFX_focus_generic_join_comintern
+		x = 8
+		y = 2
+		prerequisite = {
+			focus = PRS_FATEOFCOMMUNE
+		}
+		mutually_exclusive = {
+			focus = PRS_UNIFICATIONFOCUS
+		}
+		mutually_exclusive = {
+			focus = PRS_CONQUER
+		}
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = PRS_UNIFICATIONFOCUS
+		icon = GFX_focus_generic_join_comintern
+		x = 10
+		y = 2
+		prerequisite = {
+			focus = PRS_FATEOFCOMMUNE
+		}
+		mutually_exclusive = {
+			focus = PRS_PEACEEXI
+		}
+		mutually_exclusive = {
+			focus = PRS_CONQUER
+		}
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+				add_stability = 0.1
+				PRS = {		
+					add_war_support = 0.2
+					division_template = {
+						name = "National Freedom Force"
+						division_names_group = USA_INF_01
+						priority = 0
+						locked = no
+						template_counter = 0
+						regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 0 y = 3 }
+							}
+						support = { 
+							military_police = { x = 0 y = 0 }
+						}
+					}
+				16 = {
+					create_unit = {
+						division = "name = \"National Freedom Force\" division_template = \"National Freedom Force\" start_experience_factor = 0.4"
+						owner = PRS
+						count = 10
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = PRS_CONQUER
+		icon = GFX_focus_generic_join_comintern
+		x = 12
+		y = 2
+		prerequisite = {
+			focus = PRS_FATEOFCOMMUNE
+		}
+		mutually_exclusive = {
+			focus = PRS_PEACEEXI
+		}
+		mutually_exclusive = {
+			focus = PRS_UNIFICATIONFOCUS
+		}
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+			PRS = {		
+					add_war_support = 0.2
+					division_template = {
+						name = "National Freedom Force"
+						division_names_group = USA_INF_01
+						priority = 0
+						locked = no
+						template_counter = 0
+						regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 0 y = 3 }
+							}
+						support = { 
+							military_police = { x = 0 y = 0 }
+						}
+					}
+				16 = {
+					create_unit = {
+						division = "name = \"National Freedom Force\" division_template = \"National Freedom Force\" start_experience_factor = 0.4"
+						owner = PRS
+						count = 10
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRS_DEALWITHNORMANDY
+		icon = GFX_focus_generic_join_comintern
+		x = 11
+		y = 3
+		prerequisite = {
+			focus = PRS_CONQUER
+			focus = PRS_UNIFICATIONFOCUS
+		}
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			NMD = {		
+					add_war_support = 0.2
+					division_template = {
+						name = "Test"
+						division_names_group = USA_INF_01
+						priority = 0
+						template_counter = 0
+						regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 0 y = 3 }
+							}
+						support = { 
+							military_police = { x = 0 y = 0 }
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"Normandian Self Defense Force\" division_template = \"Test\" start_experience_factor = 0.4"
+							owner = NMD
+							count = 3
+							allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+			declare_war_on = {
+				target = NMD
+				type = annex_everything
+				
+			}
+			add_state_core = 15
+			set_cosmetic_tag = PRS_NFR
+		}
+	}
+	focus = {
+		id = PRS_DEALWITHTHERDN
+		icon = GFX_focus_generic_join_comintern
+		x = 11
+		y = 4
+		prerequisite = {
+			focus = PRS_DEALWITHNORMANDY
+		}
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			RDN = {		
+					add_war_support = 0.2
+					division_template = {
+						name = "Test"
+						division_names_group = USA_INF_01
+						priority = 0
+						template_counter = 0
+						regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 0 y = 3 }
+							}
+						support = { 
+							military_police = { x = 0 y = 0 }
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"Normandian Self Defense Force\" division_template = \"Test\" start_experience_factor = 0.4"
+							owner = RDN
+							count = 3
+							allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+			declare_war_on = {
+				target = RDN
+				type = annex_everything
+				
+			}
+			add_state_core = 24
+			add_state_core = 30
+			set_cosmetic_tag = PRS_NFRT
+		}
+	}
+	focus = {
+		id = PRS_DEALWITHTHEPENINSULA
+		icon = GFX_focus_generic_join_comintern
+		x = 11
+		y = 5
+		prerequisite = {
+			focus = PRS_DEALWITHTHERDN
+		}
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			BRI = {		
+					add_war_support = 0.2
+					division_template = {
+						name = "Test"
+						division_names_group = USA_INF_01
+						priority = 0
+						template_counter = 0
+						regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 0 y = 3 }
+							}
+						support = { 
+							military_police = { x = 0 y = 0 }
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"Breton Self Defense Force\" division_template = \"Test\" start_experience_factor = 0.4"
+							owner = BRI
+							count = 5
+							allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+			declare_war_on = {
+				target = BRI
+				type = annex_everything
+				
+			}
+			add_state_core = 14
+			set_cosmetic_tag = PRS_NFRTH
+		}
+	}
+	focus = {
+		id = PRS_DEALWITHAQUITAINE
+		icon = GFX_focus_generic_join_comintern
+		x = 11
+		y = 6
+		prerequisite = {
+			focus = PRS_DEALWITHTHEPENINSULA
+		}
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			AQT = {		
+					add_war_support = 0.2
+					division_template = {
+						name = "Test"
+						division_names_group = USA_INF_01
+						priority = 0
+						template_counter = 0
+						regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 0 y = 3 }
+							}
+						support = { 
+							military_police = { x = 0 y = 0 }
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"Aquitainian Self Defense Force\" division_template = \"Test\" start_experience_factor = 0.4"
+							owner = AQT
+							count = 5
+							allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+			declare_war_on = {
+				target = AQT
+				type = annex_everything
+				
+			}
+			add_state_core = 23
+			add_state_core = 19
+			set_cosmetic_tag = PRS_NWF
+		}
+	}
+
+	focus = {
+		id = PRS_DEALWITHBURGUNDY
+		icon = GFX_focus_generic_join_comintern
+		x = 11
+		y = 7
+		prerequisite = {
+			focus = PRS_DEALWITHAQUITAINE
+		}
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			BRG = {		
+					add_war_support = 0.2
+					division_template = {
+						name = "Test"
+						division_names_group = USA_INF_01
+						priority = 0
+						template_counter = 0
+						regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 0 y = 3 }
+							}
+						support = { 
+							military_police = { x = 0 y = 0 }
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"Aquitainian Self Defense Force\" division_template = \"Test\" start_experience_factor = 0.4"
+							owner = BRG
+							count = 6
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+			declare_war_on = {
+				target = BRG
+				type = annex_everything
+				
+			}
+			add_state_core = 785
+			add_state_core = 27
+			add_state_core = 17
+			add_state_core = 18
+			set_cosmetic_tag = PRS_NWFT
+			annex_country = {
+				target = NAV
+				transfer_troops = no
+			}
+			VCH = {
+				annex_country = {
+					target = ALP
+				}
+				annex_country = {
+					target = OCC
+				}
+			}
+		}
+	}
+	focus = {
+		id = PRS_SACREDWAR
+		icon = GFX_focus_generic_join_comintern
+		x = 11
+		y = 8
+		prerequisite = {
+			focus = PRS_DEALWITHBURGUNDY
+		}
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			VCH = {		
+					add_war_support = 0.2
+					division_template = {
+						name = "Test"
+						division_names_group = USA_INF_01
+						priority = 0
+						template_counter = 0
+						regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 0 y = 3 }
+							}
+						support = { 
+							military_police = { x = 0 y = 0 }
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"National Liberation Forces\" division_template = \"Test\" start_experience_factor = 0.4"
+							owner = VCH
+							count = 15
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+			declare_war_on = {
+				target = VCH
+				type = annex_everything
+				
+			}
+			add_state_core = 33
+			add_state_core = 26
+			add_state_core = 20
+			add_state_core = 32
+			add_state_core = 21
+			add_state_core = 22
+			add_state_core = 31
+			add_state_core = 25
+			set_cosmetic_tag = PRS_FRA
+			capital_scope = {
+				create_unit = {
+					division = "name = \"National Freedom Force\" division_template = \"National Freedom Force	\" start_experience_factor = 0.4"
+					owner = PRS
+					count = 15
+					allow_spawning_on_enemy_provs = yes
+				}	
+			}
+		}
+	}
+	focus = {	
+		id = PRS_BELGIUM
+		icon = GFX_focus_generic_join_comintern
+		x = 14
+		y = 3
+		cost = 3
+		prerequisite = {
+			focus = PRS_CONQUER
+		}
+		available = {
+			PRS = {
+				has_country_flag = PRS_FRA_UNITED
+				}
+		}
+			
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_state_core = 29
+			add_state_core = 34	
+			PRS = {
+				set_cosmetic_tag = PRS_GFR
+				add_stability = 0.1
+				declare_war_on = {
+					target = BEL
+					type = annex_everything
+				}
+			}
+		}
+	}
+}

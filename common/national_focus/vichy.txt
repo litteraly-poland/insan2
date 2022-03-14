@@ -1,0 +1,570 @@
+﻿focus_tree = {	
+	id = fea_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = VCH
+		}
+	}
+	default = no
+	
+
+	focus = {
+		id = VCH_INTRO
+		icon = GFX_goal_support_fascism
+		x = 10
+		y = 0
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = VCH_FATEOFSTATE
+		icon = GFX_goal_support_fascism
+		x = 10
+		y = 1
+		prerequisite = {
+			focus = VCH_INTRO
+		}
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = VCH_PEACEEXI
+		icon = GFX_goal_support_fascism
+		x = 8
+		y = 2
+		prerequisite = {
+			focus = VCH_FATEOFSTATE
+		}
+		mutually_exclusive = {
+			focus = VCH_UNIFICATIONFOCUS
+		}
+		mutually_exclusive = {
+			focus = VCH_CONQUER
+		}
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+	focus = {
+		id = VCH_UNIFICATIONFOCUS
+		icon = GFX_goal_support_fascism
+		x = 10
+		y = 2
+		prerequisite = {
+			focus = VCH_FATEOFSTATE
+		}
+		mutually_exclusive = {
+			focus = VCH_PEACEEXI
+		}
+		mutually_exclusive = {
+			focus = VCH_CONQUER
+		}
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+				add_stability = 0.1
+				VCH = {		
+					add_war_support = 0.2
+					division_template = {
+						name = "National Freedom Force"
+						division_names_group = USA_INF_01
+						priority = 0
+						locked = no
+						template_counter = 0
+						regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 0 y = 3 }
+							}
+						support = { 
+							military_police = { x = 0 y = 0 }
+						}
+					}
+				26 = {
+					create_unit = {
+						division = "name = \"National Freedom Force\" division_template = \"National Freedom Force\" start_experience_factor = 0.4"
+						owner = VCH
+						count = 10
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = VCH_CONQUER
+		icon = GFX_goal_support_fascism
+		x = 12
+		y = 2
+		prerequisite = {
+			focus = VCH_FATEOFSTATE
+		}
+		mutually_exclusive = {
+			focus = VCH_PEACEEXI
+		}
+		mutually_exclusive = {
+			focus = VCH_UNIFICATIONFOCUS
+		}
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+			VCH = {		
+					add_war_support = 0.2
+					division_template = {
+						name = "National Freedom Force"
+						division_names_group = USA_INF_01
+						priority = 0
+						locked = no
+						template_counter = 0
+						regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 0 y = 3 }
+							}
+						support = { 
+							military_police = { x = 0 y = 0 }
+						}
+					}
+				26 = {
+					create_unit = {
+						division = "name = \"National Freedom Force\" division_template = \"National Freedom Force\" start_experience_factor = 0.4"
+						owner = VCH
+						count = 10
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = VCH_DEALWITHTHEALPES
+		icon = GFX_goal_support_fascism
+		x = 11
+		y = 3
+		prerequisite = {
+			focus = VCH_CONQUER
+			focus = VCH_UNIFICATIONFOCUS
+		}
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			ALP = {		
+					add_war_support = 0.2
+					division_template = {
+						name = "Test"
+						division_names_group = USA_INF_01
+						priority = 0
+						template_counter = 0
+						regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 0 y = 3 }
+							}
+						support = { 
+							military_police = { x = 0 y = 0 }
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"Alpine National Guard\" division_template = \"Test\" start_experience_factor = 0.4"
+							owner = ALP
+							count = 3
+							allow_spawning_on_enemy_provs = yes
+						}
+					}	
+			}
+			declare_war_on = {
+				target = ALP
+				type = annex_everything
+				
+			}
+			add_state_core = 15
+		}
+	}
+	focus = {
+		id = VCH_DEALWITHTHEOCCITANS
+		icon = GFX_goal_support_fascism
+		x = 11
+		y = 4
+		prerequisite = {
+			focus = VCH_DEALWITHTHEALPES
+		}
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			OCC = {		
+					add_war_support = 0.2
+					division_template = {
+						name = "Test"
+						division_names_group = USA_INF_01
+						priority = 0
+						template_counter = 0
+						regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 0 y = 3 }
+							}
+						support = { 
+							military_police = { x = 0 y = 0 }
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"Occitanian Self Defense Force\" division_template = \"Test\" start_experience_factor = 0.4"
+							owner = OCC
+							count = 3
+							allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+			declare_war_on = {
+				target = OCC
+				type = annex_everything
+				
+			}
+			add_state_core = 24
+			add_state_core = 30
+		}
+	}
+	focus = {
+		id = VCH_TAKEOUTNAVARRA
+		icon = GFX_goal_support_fascism
+		x = 11
+		y = 5
+		prerequisite = {
+			focus = VCH_DEALWITHTHEOCCITANS
+		}
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			NAV = {		
+					add_war_support = 0.2
+					division_template = {
+						name = "Test"
+						division_names_group = USA_INF_01
+						priority = 0
+						template_counter = 0
+						regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 0 y = 3 }
+							}
+						support = { 
+							military_police = { x = 0 y = 0 }
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"Basque Self Defense Force\" division_template = \"Test\" start_experience_factor = 0.4"
+							owner = NAV
+							count = 5
+							allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+			declare_war_on = {
+				target = NAV
+				type = annex_everything
+				
+			}
+			add_state_core = 14
+		}
+	}
+	focus = {
+		id = VCH_DEALWITHAQUITAINE
+		icon = GFX_goal_support_fascism
+		x = 11
+		y = 6
+		prerequisite = {
+			focus = VCH_TAKEOUTNAVARRA
+		}
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			AQT = {		
+					add_war_support = 0.2
+					division_template = {
+						name = "Test"
+						division_names_group = USA_INF_01
+						priority = 0
+						template_counter = 0
+						regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 0 y = 3 }
+							}
+						support = { 
+							military_police = { x = 0 y = 0 }
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"Aquitainian Self Defense Force\" division_template = \"Test\" start_experience_factor = 0.4"
+							owner = AQT
+							count = 5
+							allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+			declare_war_on = {
+				target = AQT
+				type = annex_everything
+				
+			}
+			add_state_core = 23
+			add_state_core = 19
+			 = VCH_NWF
+		}
+	}
+
+	focus = {
+		id = VCH_DEALWITHTHERDN
+		icon = GFX_goal_support_fascism
+		x = 11
+		y = 7
+		prerequisite = {
+			focus = VCH_DEALWITHAQUITAINE
+		}
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			RDN = {		
+					add_war_support = 0.2
+					division_template = {
+						name = "Test"
+						division_names_group = USA_INF_01
+						priority = 0
+						template_counter = 0
+						regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 0 y = 3 }
+							}
+						support = { 
+							military_police = { x = 0 y = 0 }
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"Northern Legion\" division_template = \"Test\" start_experience_factor = 0.4"
+							owner = RDN
+							count = 6
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+			declare_war_on = {
+				target = RDN
+				type = annex_everything
+				
+			}
+			PRS = {
+				annex_country = {
+					target = BRG
+				}
+				annex_country = {
+					target = NMD
+				}
+				annex_country = {
+					target = BRG
+				}
+				annex_country = {
+					target = BRI
+				}
+			}
+		}
+	}
+	focus = {
+		id = VCH_CRUSADEAGAINSTCOMMUNISM
+		icon = GFX_goal_support_fascism
+		x = 11
+		y = 8
+		prerequisite = {
+			focus = VCH_DEALWITHTHERDN
+		}
+		cost = 3
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			VCH = {		
+					add_war_support = 0.2
+					division_template = {
+						name = "Test"
+						division_names_group = USA_INF_01
+						priority = 0
+						template_counter = 0
+						regiments = {
+								infantry = { x = 0 y = 0 }
+								infantry = { x = 0 y = 1 }
+								infantry = { x = 0 y = 2 }
+								infantry = { x = 0 y = 3 }
+							}
+						support = { 
+							military_police = { x = 0 y = 0 }
+						}
+					}
+					capital_scope = {
+						create_unit = {
+							division = "name = \"National Liberation Forces\" division_template = \"Test\" start_experience_factor = 0.4"
+							owner = VCH
+							count = 15
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+			declare_war_on = {
+				target = PRS
+				type = annex_everything
+				
+			}
+			add_state_core = 33
+			add_state_core = 26
+			add_state_core = 20
+			add_state_core = 32
+			add_state_core = 21
+			add_state_core = 22
+			add_state_core = 31
+			add_state_core = 25
+			set_cosmetic_tag = VCH_FRA
+			capital_scope = {
+				create_unit = {
+					division = "name = \"National Freedom Force\" division_template = \"National Freedom Force	\" start_experience_factor = 0.4"
+					owner = VCH
+					count = 15
+					allow_spawning_on_enemy_provs = yes
+				}	
+			}
+		}
+	}
+	focus = {	
+		id = VCH_BELGIUM
+		icon = GFX_goal_support_fascism
+		x = 14
+		y = 3
+		cost = 3
+		prerequisite = {
+			focus = VCH_CONQUER
+		}
+		available = {
+			VCH = {
+				has_country_flag = VCH_FRA_UNITED
+				}
+		}
+			
+		ai_will_do = {
+			factor = 1
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_state_core = 29
+			add_state_core = 34	
+			VCH = {
+				 = VCH_GFR
+				add_stability = 0.1
+				declare_war_on = {
+					target = BEL
+					type = annex_everything
+				}
+			}
+		}
+	}
+}
